@@ -1,0 +1,14 @@
+<div>
+  <select (change)="filterToAccounts()" [(ngModel)]="fromAccount.selected">
+    <option></option>
+    <option *ngFor="let option of fromAccount.options" [ngValue]="option">
+      {{option.name}}
+    </option>
+  </select>
+  <select (change)="filterFromAccounts()" [(ngModel)]="toAccount.selected">
+    <option></option>
+    <option *ngFor="let option of toAccount.options" [ngValue]="option">
+      {{option.name}}
+    </option>
+  </select>
+</div>
